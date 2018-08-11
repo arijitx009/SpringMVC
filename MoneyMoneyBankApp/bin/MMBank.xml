@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id ="DAO" class="com.cg.moneymoneybankapp.account.dao.MoneyMoneyBankCollection">
+	
+	</bean>
+	
+	<bean id="BFactory" class="com.cg.moneymoneybankapp.factory.MMBankFactory">
+	
+	</bean>
+	
+	<bean id="MController" class="com.cg.moneymoneybankapp.controller.MoneyMoneyBankController">
+		<property name="mmBankCollection" ref="DAO"></property>
+		<property name="mmBankFactory" ref="BFactory"></property>
+	</bean>
+	
+</beans>
